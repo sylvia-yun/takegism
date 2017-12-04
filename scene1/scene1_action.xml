@@ -1,0 +1,75 @@
+<krpano version="1.18" title="Virtual Tour" onstart="">
+
+
+        <action name="showMap">
+        if(layer[introimage].visible,
+            set(layer[introimage].enabled,false);
+            set(layer[introimage].visible,false);
+		    tween(layer[introimage].alpha, 0.0, 0.5);,
+        set(layer[introimage].enabled,true);
+        set(layer[introimage].visible,true);
+		tween(layer[introimage].alpha, 1.0, 0.5););
+		
+		<!--显示提示-->
+		set(layer[tips3].visible,true);			
+	    </action>
+	    
+	    
+		<!--设置时钟出现,同时将hs6热点取消点击事件,并且将hs8重置热点设置为有效-->
+		<action name="compass">
+	    set(hotspot[hs6].enabled,false);
+	    set(hotspot[hs8].visible,true);
+		
+		<!--显示提示-->
+		set(layer[tips4].visible,true);	
+		</action>
+		
+		<!--时间重置,回到初始关卡-->
+		<action name="resetTime">
+			set(hotspot[hs6].enabled,true);
+			set(hotspot[hs7].enabled,false);
+			set(hotspot[hs8].visible,false);
+			set(hotspot[hs10].enabled,false);
+			<!--显示提示-->
+		    set(layer[tips5].visible,true);	
+		</action>
+		
+		<!--触发时钟-->
+		<action name="btn_clock">
+			set(hotspot[hs7].enabled,false);
+			set(hotspot[hs8].visible,false);
+			set(hotspot[hs10].visible,false);
+			set(hotspot[spot_zhuang].visible,true);
+			<!--显示提示-->
+		    set(layer[tips6].visible,true);	
+		</action>
+		<!--触发转轮-->
+		<action name="hotspot_animate">
+			inc(frame,1,get(lastframe),0);
+			mul(ypos,frame,frameheight);
+			txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight));
+			if(frameoff LT 1,
+			delayedcall(get(framespeed), if(loaded, hotspot_animate() ) );
+			);
+		</action>
+		
+        <!--触发手指-->
+		<action name="showFigner">
+        if(layer[fignerImage].visible,
+            set(layer[fignerImage].enabled,false);
+            set(layer[fignerImage].visible,false);
+		    tween(layer[fignerImage].alpha, 0.0, 0.5);,
+        set(layer[fignerImage].enabled,true);
+        set(layer[fignerImage].visible,true);
+		tween(layer[fignerImage].alpha, 1.0, 0.5););
+        <!--显示提示-->
+		delayedcall(1.0,tween(plugin[tips_4_5].y,0,1.0))
+	    </action>
+	    
+        <!--触发宝石-->
+		<action name="gem">
+			set(hotspot[hot1].visible,true);
+		</action>
+
+
+</krpano>

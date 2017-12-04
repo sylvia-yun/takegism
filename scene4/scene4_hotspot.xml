@@ -1,0 +1,40 @@
+<krpano version="1.18" title="scene4" onstart="">
+
+
+	    <hotspot name="scene4_hs1" style="hsStyle" enabled="false"
+		onclick="delayedcall(1.0,tween(plugin[tips4_2_1].y,0,1.0));"
+	         >
+		<point ath="-54.233389" atv="-28.076411" />
+		<point ath="-45.241583" atv="-32.715403" />
+		<point ath="-45.711688" atv="-16.581289" />
+		<point ath="-54.844314" atv="-13.603223" />
+		<point ath="-54.911458" atv="-13.669441" />
+	    </hotspot>
+
+	    <hotspot name="scene4_hs2" style="hsStyle" enabled="false"
+		onclick="delayedcall(1.0,tween(plugin[tips4_3_1].y,0,1.0));"
+	         >
+		<point ath="-174.45772" atv="10.068613" />
+		<point ath="-169.719246" atv="9.398009" />
+		<point ath="-166.49543" atv="11.63127" />
+		<point ath="-172.101968" atv="12.239" />
+	    </hotspot>
+
+        <!--左边-->
+        <hotspot name="scene4_nav1" url="%SWFPATH%/img/nav.png" visible="false"
+    	     onclick="loadscene(scene_3, null, MERGR,BLEND(0.5));"
+	         ath="269.33101" atv="9.221862" width="128" height="112" scale="0.349073" 
+	         />
+	    <!--中间-->
+	    <hotspot name="scene4_nav2" url="%SWFPATH%/img/nav.png" visible="false"
+		     onclick="loadscene(scene_2, null, MERGR,BLEND(0.5));"
+	         ath="1.962989" atv="15.389894" width="128" height="112" scale="0.355766" 
+	         />
+        <!--右边-->
+	    <hotspot name="scene4_nav3" url="%SWFPATH%/img/nav.png" visible="false"
+		     onclick="delayedcall(1.0,tween(plugin[scene4_end].y,0,1.0));"
+	         ath="101.209282" atv="27.450377" width="128" height="112" scale="0.459043" 
+	         />
+
+
+</krpano>

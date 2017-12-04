@@ -1,0 +1,26 @@
+<krpano version="1.19" title="scene5" onstart="">
+
+	<layer name="tips5_3" url="%SWFPATH%/tips/tips5_3.png" 
+	       align="topcenter" x="0" y="0" width="1280" height="206" scale="0.5" 
+	       onclick=""
+	       bgborder="0"
+	       bgroundedge="0"
+	       bgshadow=""
+	       maxheight="0"
+	       maxwidth="0"
+	       minheight="0"
+	       minwidth="0"
+	       />
+	<layer name="tips5_2" url="%SWFPATH%/tips/tips5_2.png" 
+	       align="topcenter" x="0" y="-200" width="1280" height="206" scale="0.5" 
+	       bgborder="0"
+	       bgroundedge="0"
+	       bgshadow=""
+	       maxheight="0"
+	       maxwidth="0"
+	       minheight="0"
+	       minwidth="0"
+	       />
+	  
+	       
+</krpano>

@@ -1,0 +1,44 @@
+<krpano version="1.18" title="scene2" onstart="">
+
+        <hotspot name="scene2_hs1" style="hsStyle" enabled="false"
+			onclick="delayedcall(1.0,tween(plugin[tips2_1_1_1].y,0,1.0));"
+	         >
+		<point ath="-118.882952" atv="21.98227" />
+		<point ath="-117.336178" atv="21.455488" />
+		<point ath="-111.864154" atv="20.01121" />
+		<point ath="-110.33226" atv="21.296323" />
+		<point ath="-110.029434" atv="24.509302" />
+		<point ath="-116.453904" atv="26.262283" />
+		<point ath="-118.845761" atv="24.933541" />
+		<point ath="-118.810966" atv="22.04127" />
+	    </hotspot>
+
+	    <hotspot name="scene2_hs2" style="hsStyle" enabled="false"
+		onclick="delayedcall(1.0,tween(plugin[tips2_2_3_1].y,0,1.0));"
+	         >
+		<point ath="-64.676799" atv="-26.489251" />
+		<point ath="-57.049236" atv="-30.818283" />
+		<point ath="-57.147337" atv="-21.874554" />
+		<point ath="-64.663989" atv="-18.7599" />
+	    </hotspot>
+
+	    <hotspot name="scene2_hs3" style="hsStyle" enabled="false"
+		onclick="delayedcall(1.0,tween(plugin[tips2_5_1].y,0,1.0));"
+	         >
+		<point ath="109.019181" atv="13.209191" />
+		<point ath="110.258683" atv="12.745248" />
+		<point ath="114.590749" atv="28.010793" />
+		<point ath="112.909263" atv="28.321852" />
+	    </hotspot>
+
+	     <hotspot name="scene2_hs4" style="hsStyle" enabled="false"
+	     onclick="tween(plugin[scene2_end].y,0);"
+	         >
+		<point ath="37.722798" atv="-6.665243" />
+		<point ath="57.560598" atv="-5.670264" />
+		<point ath="57.629071" atv="21.996984" />
+		<point ath="37.839601" atv="24.071668" />
+		<point ath="37.841016" atv="24.163081" />
+	    </hotspot>
+
+</krpano>

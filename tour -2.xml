@@ -1,0 +1,329 @@
+<krpano version="1.18" title="Virtual Tour" onstart="">
+
+	<action name="startup">
+		loadscene(get(startscene), null, MERGE);
+	</action>
+
+	<plugin name="soundinterface"
+	        url="%SWFPATH%/plugins/soundinterface.swf"
+	        alturl="%SWFPATH%/plugins/soundinterface.js"
+	        rootpath=""
+	        preload="true"
+	        keep="true"
+	        />
+
+<!-- 自动旋转 -->
+<autorotate enabled ="true"
+	            waittime="1"
+	            accel   ="1"
+	            speed   ="1"
+	            horizon ="0"
+	            tofov   ="NaN"
+	            />
+<!-- 自动旋转 -->
+
+<layer name="welcome" devices="all" type="image" url="img/welcome.jpg" keep="true" scale="0.5" alpha="1"  x="0" y="0"  align="center" zorder="1" handcursor="false" onclick="loadscene(scene_1, null, MERGE); tween(layer[welcome].y,-3000); tween(layer[welcome].alpha,0); playsound(bgsnd, 'bgsound.mp3', 0); lookto(161,35,120,smooth(300,60,300)); tween(plugin[tips1].y,0); tween(hotspot[hs2].alpha,1);">
+</layer>
+			
+	<scene name="scene_1" title="1" onstart="" thumburl="panos/1.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512">
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/1.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/1.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/1.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+<plugin name="tips1" devices="all" url="img/05.png"  align="topcenter" x="0" y="-200" scale="0.5" alpha="1" onclick="tween(plugin[tips1].y,-200);"/>
+<plugin name="tips2" devices="all" url="img/06.png"  align="topcenter" x="0" y="-200" scale="0.5" alpha="1" onclick="tween(plugin[tips2].y,-200);"/>
+<plugin name="tips3" devices="all" url="img/07.png"  align="topcenter" x="0" y="-200" scale="0.5" alpha="1" onclick="tween(plugin[tips3].y,-200);"/>
+<plugin name="tipsbtn" devices="all" url="img/09.png"  align="center" x="0" y="-8000" scale="0.5" alpha="1" onclick="tween(plugin[tipsbtn].alpha,0); lookto(81,5,13,smooth(300,60,300)); loadscene(scene_2, null, MERGR,BLEND(0.5));"/>
+
+
+
+<hotspot name="hot1" devices="all"
+	         url="img/hot.png"
+	         keep="false"
+	         ath="146.20255888446547" atv="-2.5947142155215928"
+	         zoom="true" distorted="false" details="8" flying="0"
+	         width="227" height="227"
+	         scale="0.4806414350471975" scale9grid="" scalechildren="false" rotate="0"
+	         rx="0" ry="0" rz="0"
+	         edge="center" ox="" oy=""
+	         crop="" ondowncrop="" onovercrop=""
+	         visible="true" enabled="true" usecontentsize="false" handcursor="false" capture="true" children="true" maskchildren="false"
+ 	         zorder="0"
+	         alpha="1" autoalpha="false" blendmode="normal" effect="" smoothing="true" pixelhittest="false"
+	         refreshrate="auto"
+ 	         onloaded=""
+	         onover=""
+	         onhover=""
+	         onout=""
+	         ondown=""
+	         onup=""
+	         onclick="lookto(154,31,120,smooth(300,200,300)); tween(hotspot[hs2].alpha,0); lookto(194,86,120,smooth(300,200,300)); tween(hotspot[hs4].alpha,1);  tween(plugin[tips1].y,-200); tween(plugin[tips2].y,0); tween(hotspot[hot1].scale,0.001); tween(hotspot[hot2].scale,0.3);"
+	         bgalpha="0"
+	         bgcapture="false"
+	         bgcolor="0"
+	         type="image"
+		>
+	</hotspot>
+	
+<hotspot name="hot2" devices="all"
+	         url="img/hot.png"
+	         keep="false"
+	        ath="34.12443575374026" atv="-3.4961928075094524"
+	         zoom="true" distorted="false" details="8" flying="0"
+	         width="227" height="227"
+	         scale="0.0001" scale9grid="" scalechildren="false" rotate="0"
+	         rx="0" ry="0" rz="0"
+	         edge="center" ox="" oy=""
+	         crop="" ondowncrop="" onovercrop=""
+	         visible="true" enabled="true" usecontentsize="false" handcursor="false" capture="true" children="true" maskchildren="false"
+ 	         zorder="0"
+	         alpha="1" autoalpha="false" blendmode="normal" effect="" smoothing="true" pixelhittest="false"
+	         refreshrate="auto"
+ 	         onloaded=""
+	         onover=""
+	         onhover=""
+	         onout=""
+	         ondown=""
+	         onup=""
+	        onclick="lookto(194,86,120,smooth(300,200,300)); tween(hotspot[hs4].alpha,0); lookto(-320,13,120,smooth(300,200,300));  tween(hotspot[hs3].alpha,1);  tween(plugin[tips2].y,-200); tween(plugin[tips3].y,0); tween(hotspot[hot2].scale,0.001); tween(hotspot[hot3].scale,0.3);"
+	         bgalpha="0"
+	         bgcapture="false"
+	         bgcolor="0"
+	         type="image"
+		>
+	</hotspot>
+	
+	<hotspot name="hot3" devices="all"
+	         url="img/hot.png"
+	         keep="false"
+	         ath="-45.5458210034636" atv="28.762845562584612"
+	         zoom="true" distorted="false" details="8" flying="0"
+	         width="227" height="227"
+	         scale="0.0001" scale9grid="" scalechildren="false" rotate="0"
+	         rx="0" ry="0" rz="0"
+	         edge="center" ox="" oy=""
+	         crop="" ondowncrop="" onovercrop=""
+	         visible="true" enabled="true" usecontentsize="false" handcursor="false" capture="true" children="true" maskchildren="false"
+ 	         zorder="0"
+	         alpha="1" autoalpha="false" blendmode="normal" effect="" smoothing="true" pixelhittest="false"
+	         refreshrate="auto"
+ 	         onloaded=""
+	         onover=""
+	         onhover=""
+	         onout=""
+	         ondown=""
+	         onup=""
+	        onclick="lookto(43,5,120,smooth(300,200,300)); tween(hotspot[hs3].alpha,0); tween(plugin[tips3].y,-200); lookto(75,-1,120,smooth(300,200,300)); tween(plugin[tipsbtn].y,0);" 
+	         bgalpha="0"
+	         bgcapture="false"
+	         bgcolor="0"
+	         type="image"
+		>
+	</hotspot>
+<hotspot name="hs1" devices="all"
+	         url="img/01.png"
+	         keep="false"
+	         ath="79.06250657162501" atv="8.733118457862876"
+	         zoom="true" distorted="true" details="8" flying="0"
+	         width="401" height="1000"
+	         scale="0.5567120185065715" scale9grid="" scalechildren="false" rotate="0"
+	         rx="0" ry="0" rz="0"
+	         edge="center" ox="" oy=""
+	         crop="" ondowncrop="" onovercrop=""
+	         visible="true" enabled="true" usecontentsize="false" handcursor="false" capture="false" children="true" maskchildren="false"
+ 	         zorder="0"
+	         alpha="0" autoalpha="false" blendmode="normal" effect="" smoothing="true" pixelhittest="false"
+	         refreshrate="auto"
+ 	         onloaded=""
+	         onover=""
+	         onhover=""
+	         onout=""
+	         ondown=""
+	         onup=""
+	         onclick=""
+	         bgalpha="0"
+	         bgcapture="false"
+	         bgcolor="0"
+	         type="image"
+		>
+	</hotspot>
+
+	<hotspot name="hs3" devices="all"
+	         url="img/03.png"
+	         keep="false"
+	         ath="38.11841083601091" atv="17.51377604913558"
+	          zoom="true" distorted="true" details="8" flying="0"
+	         width="1300" height="712"
+	         scale="0.3532851185674329" scale9grid="" scalechildren="false" rotate="0"
+	         rx="0" ry="0" rz="0"
+	         edge="center" ox="" oy=""
+	         crop="" ondowncrop="" onovercrop=""
+	         visible="true" enabled="true" usecontentsize="false" handcursor="false" capture="false" children="true" maskchildren="false"
+ 	         zorder="0"
+	         alpha="0" autoalpha="false" blendmode="normal" effect="" smoothing="true" pixelhittest="false"
+	         refreshrate="auto"
+ 	         onloaded=""
+	         onover=""
+	         onhover=""
+	         onout=""
+	         ondown=""
+	         onup=""
+	         onclick=""
+	         bgalpha="0"
+	         bgcapture="false"
+	         bgcolor="0"
+	         type="image"
+		>
+	</hotspot>
+
+	<hotspot name="hs2" devices="all"
+	         url="img/02.png"
+	         keep="false"
+	         ath="163.27259468197286" atv="40.09779002246029"
+	         zoom="true" distorted="true" details="8" flying="0"
+	         width="1200" height="481"
+	         scale="0.5306337610846044" scale9grid="" scalechildren="false" rotate="0"
+	         rx="0" ry="0" rz="2.414693969577737"
+	         edge="center" ox="" oy=""
+	         crop="" ondowncrop="" onovercrop=""
+	         visible="true" enabled="true" usecontentsize="false" handcursor="false" capture="false" children="true" maskchildren="false"
+ 	         zorder="0"
+	         alpha="0" autoalpha="false" blendmode="normal" effect="" smoothing="true" pixelhittest="false"
+	         refreshrate="auto"
+ 	         onloaded=""
+	         onover=""
+	         onhover=""
+	         onout=""
+	         ondown=""
+	         onup=""
+	         onclick=""
+	         bgalpha="0"
+	         bgcapture="false"
+	         bgcolor="0"
+	         type="image"
+		>
+	</hotspot>
+
+	<hotspot name="hs4" devices="all"
+	         url="img/04.png"
+	         keep="false"
+	         ath="226.21695387484337" atv="88.35599583492646"
+	          zoom="true" distorted="true" details="8" flying="0"
+	         width="1300" height="717"
+	         scale="0.5934874719780383" scale9grid="" scalechildren="false" rotate="0"
+	         rx="0" ry="0" rz="0"
+	         edge="center" ox="" oy=""
+	         crop="" ondowncrop="" onovercrop=""
+	         visible="true" enabled="true" usecontentsize="false" handcursor="false" capture="false" children="true" maskchildren="false"
+ 	         zorder="0"
+	         alpha="0" autoalpha="false" blendmode="normal" effect="" smoothing="true" pixelhittest="false"
+	         refreshrate="auto"
+ 	         onloaded=""
+	         onover=""
+	         onhover=""
+	         onout=""
+	         ondown=""
+	         onup=""
+	         onclick=""
+	         bgalpha="0"
+	         bgcapture="false"
+	         bgcolor="0"
+	         type="image"
+		>
+	</hotspot>
+		<!-- place your scene hotspots here -->
+
+	</scene>
+
+	<scene name="scene_2" title="mobile_u_equi" onstart="" thumburl="panos/mobile_u_equi.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/mobile_u_equi.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512">
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/mobile_u_equi.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/mobile_u_equi.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/mobile_u_equi.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+<plugin name="tips4" devices="all" url="img/08.png"  align="topcenter" x="0" y="-200" scale="0.5" alpha="1" onclick="tween(plugin[tips4].y,-200);"/>
+
+<hotspot name="hot4" devices="all"
+	         url="img/hot.png"
+	         keep="false"
+	         ath="221.69875432060581" atv="-1.785013773902665"
+	         zoom="true" distorted="false" details="8" flying="0"
+	         width="227" height="227"
+	         scale="0.3" scale9grid="" scalechildren="false" rotate="0"
+	         rx="0" ry="0" rz="0"
+	         edge="center" ox="" oy=""
+	         crop="" ondowncrop="" onovercrop=""
+	         visible="true" enabled="true" usecontentsize="false" handcursor="false" capture="true" children="true" maskchildren="false"
+ 	         zorder="0"
+	         alpha="1" autoalpha="false" blendmode="normal" effect="" smoothing="true" pixelhittest="false"
+	         refreshrate="auto"
+ 	         onloaded=""
+	         onover=""
+	         onhover=""
+	         onout=""
+	         ondown=""
+	         onup=""
+	        onclick="tween(plugin[tips4].y,-200); lookto(40,10,120,smooth(300,150,300)); lookto(47,4,13,smooth(300,60,300)); loadscene(scene_DSC_4424_Panorama_sphere, null, MERGR,BLEND(0.5)); tween(layer[welcome].y,0); tween(layer[welcome].alpha,1);"
+	         bgalpha="0"
+	         bgcapture="false"
+	         bgcolor="0"
+	         type="image"
+		>
+	</hotspot>
+
+<hotspot name="hs1" devices="all"
+	         url="img/01.png"
+	         keep="false"
+	         ath="-82.4595082465735" atv="6.355872693620826"
+	         zoom="true" distorted="true" details="8" flying="0"
+	         width="401" height="1000"
+	         scale="0.6251490632083755" scale9grid="" scalechildren="false" rotate="0"
+	         rx="0" ry="0" rz="0"
+	         edge="center" ox="" oy=""
+	         crop="" ondowncrop="" onovercrop=""
+	         visible="true" enabled="true" usecontentsize="false" handcursor="false" capture="false" children="true" maskchildren="false"
+ 	         zorder="0"
+	         alpha="1.00" autoalpha="false" blendmode="normal" effect="" smoothing="true" pixelhittest="false"
+	         refreshrate="auto"
+ 	         onloaded=""
+	         onover=""
+	         onhover=""
+	         onout=""
+	         ondown=""
+	         onup=""
+	         onclick=""
+	         bgalpha="0"
+	         bgcapture="false"
+	         bgcolor="0"
+	         type="image"
+		>
+	</hotspot>
+	</scene>
+
+
+</krpano>

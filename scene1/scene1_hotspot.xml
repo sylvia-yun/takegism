@@ -1,0 +1,147 @@
+<krpano version="1.18" title="Virtual Tour" onstart="">
+
+ 
+ <!-- 函数调用-->
+
+      <!--让图片多变形热点隐藏到初始-->
+	  <style name="hsStyle" capture="false" handcursor="true" fillcolor="0xffffff" fillalpha="0.00" bordercolor="0xffffff" borderalpha="0.07"
+		onover="tween(fillalpha, 0.5, 0.25);"
+		onout="tween(fillalpha, 0.0, 0.25);"
+		/>
+	
+	  <!--显示图片-->
+	  <layer  name="introimage"
+       type="image"
+       url="%SWFPATH%/img/map.png"
+	   align="center"
+	   onclick="showMap();"
+	   keep="true"
+	   visible="false"
+       scale="1"
+	   />
+	   <layer name="fignerImage"
+       type="image"
+       url="%SWFPATH%/img/figner.png"
+	   align="center"
+	   onclick="showFigner();"
+	   keep="true"
+	   visible="false"
+       scale="2"
+	   />
+	   
+
+<!--旋转按钮-->
+	<hotspot name="spot_zhuang" url="%SWFPATH%/img/spot9.png" 
+	         ath="-29.923237" atv="-8.603363" width="40" height="40" 
+	         crop="0|0|40|40" 
+	         onover="set(frameoff,0);hotspot_animate(); "
+	         onhover="showtext('需要手掌才能打开');"
+	         onout="set(frameoff,1); "
+	         onclick="set(hotspot[hs9].visible,true);delayedcall(1.0,tween(plugin[tips_4_1].y,0,1.0));"
+	         frame="0"
+	         frameheight="40"
+	         frameoff="0"
+	         framespeed="0.03"
+	         framewidth="40"
+	         lastframe="49"
+	         zoom="true"
+	         visible="false"
+	         />
+	         
+<!--移动热点-->
+	<hotspot name="hot1" url="%SWFPATH%/img/z1.png"
+		    visible="false"
+	         handcursor="true" 
+	         ath="146.292557" atv="2.195701" width="256" height="256" scale="0.175849" zoom="true"
+	         onclick="set(hotspot[hot1].visible,false);lookto(154,31,120,smooth(300,200,300)); tween(hotspot[hs2].alpha,0); tween(hotspot[hs4].alpha,1); delayedcall(1.0,tween(plugin[tips_6_1].y,0,1.0));"
+	         />
+
+	<hotspot name="hot2" url="%SWFPATH%/img/z2.png" 
+		     visible="false"
+	         handcursor="true" 
+	         ath="42.041744" atv="-4.709557" width="256" height="256" scale="0.139963" zoom="true"
+	         onclick="set(hotspot[hot2].visible,false); tween(hotspot[hs4].alpha,0); lookto(-320,13,120,smooth(300,200,300)); tween(hotspot[hs3].alpha,1); delayedcall(1.0,tween(plugin[tips_6_4].y,0,1.0));"
+	         />
+
+	<hotspot name="hot3" url="%SWFPATH%/img/z3.png"
+		     visible="false"
+	         handcursor="true" 
+	         ath="-52.296055" atv="30.363033" width="256" height="256" scale="0.139874" zoom="true" 
+	         onclick="set(hotspot[hot3].visible,false);lookto(43,5,120,smooth(300,200,300)); tween(hotspot[hs3].alpha,0); lookto(75,-1,120,smooth(300,200,300));tween(plugin[end].y,50););"
+	         />
+
+	
+	
+	
+<!--图文热点-->
+	<hotspot name="hs6" style="hsStyle" title="获取地图"
+        enabled="false"
+		onclick="showMap();delayedcall(1.0,tween(plugin[tips_1_5].y,0,1.0));"
+	         >
+		<point ath="124.255035" atv="-14.077879" />
+		<point ath="124.127224" atv="10.801938" />
+		<point ath="94.493912" atv="10.144724" />
+		<point ath="94.535465" atv="-13.105874" />
+	</hotspot>
+
+	<hotspot name="hs7" style="hsStyle"
+		enabled="false"
+		onclick="compass();delayedcall(1.0,tween(plugin[tips_2_4].y,0,1.0));"
+	         >
+		<point ath="9.43312" atv="12.685299" />
+		<point ath="11.486862" atv="12.490792" />
+		<point ath="13.556234" atv="14.109284" />
+		<point ath="14.074811" atv="17.037283" />
+		<point ath="12.511224" atv="18.689154" />
+		<point ath="9.82037" atv="18.788281" />
+		<point ath="7.775742" atv="17.562355" />
+		<point ath="7.427234" atv="14.523803" />
+		<point ath="7.365897" atv="14.580418" />
+	</hotspot>
+
+	<hotspot name="hs8" style="hsStyle"
+		enabled="false"
+		onclick="resetTime();delayedcall(1.0,tween(plugin[tips_3_5].y,0,1.0))"
+	         >
+		<point ath="-155.545435" atv="12.434312" />
+		<point ath="-152.971479" atv="11.704068" />
+		<point ath="-150.074825" atv="12.325964" />
+		<point ath="-150.710845" atv="13.339625" />
+		<point ath="-150.611925" atv="20.704083" />
+		<point ath="-149.604653" atv="21.736859" />
+		<point ath="-152.278931" atv="22.912247" />
+		<point ath="-154.554744" atv="22.644966" />
+		<point ath="-155.611148" atv="21.468002" />
+		<point ath="-154.8053" atv="20.869978" />
+		<point ath="-154.725093" atv="13.578822" />
+		<point ath="-155.612858" atv="12.43341" />
+	</hotspot>
+
+	<hotspot name="hs9" style="hsStyle"
+		enabled="false"
+		onclick="showFigner();"
+	         >
+		<point ath="-41.701927" atv="-7.219238" />
+		<point ath="-37.888798" atv="-7.158797" />
+		<point ath="-38.04562" atv="-3.560714" />
+		<point ath="-41.628883" atv="-3.589015" />
+	</hotspot>
+	<hotspot name="hs10" style="hsStyle"
+		enabled="false"
+		onclick="btn_clock();delayedcall(1.0,tween(plugin[tips_3_6].y,0,1.0));"
+	         >
+		<point ath="-150.157281" atv="-13.83147" />
+		<point ath="-148.316431" atv="-14.428159" />
+		<point ath="-146.500549" atv="-13.674635" />
+		<point ath="-145.148923" atv="-12.078993" />
+		<point ath="-145.336476" atv="-9.168372" />
+		<point ath="-146.718638" atv="-7.907376" />
+		<point ath="-148.166698" atv="-7.497641" />
+		<point ath="-150.196125" atv="-7.884197" />
+		<point ath="-151.49961" atv="-9.117971" />
+		<point ath="-152.007536" atv="-11.498704" />
+		<point ath="-151.191712" atv="-13.131119" />
+	</hotspot>
+
+
+</krpano>

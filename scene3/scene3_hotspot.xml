@@ -1,0 +1,31 @@
+<krpano version="1.18" title="scene3" onstart="">
+
+
+	<hotspot name="scene3_phone" url="%SWFPATH%/img/phone.png"  enabled="false"
+	         ath="-71.173663" atv="28.334073" width="682" height="1024" scale="0.039979" 
+	         onclick="set(hotspot[scene3_phone].visible,false);delayedcall(1.0,tween(plugin[tips3_1_1_1].y,0,1.0));"
+	         />
+
+        <hotspot name="scene3_hs1" style="hsStyle" enabled="false"
+    	onclick="delayedcall(1.0,tween(plugin[tips3_2_1_1].y,0,1.0));"
+	         >
+		<point ath="118.340818" atv="11.584012" />
+		<point ath="119.753862" atv="11.316642" />
+		<point ath="120.1679" atv="13.743811" />
+		<point ath="120.325027" atv="19.533455" />
+		<point ath="118.852962" atv="19.770857" />
+	    </hotspot>
+
+
+	    <hotspot name="scene3_hs2" style="hsStyle"
+		onclick="delayedcall(1.0,tween(plugin[scene3_end].y,0,1.0));"
+	         >
+		<point ath="169.574523" atv="-19.174848" />
+		<point ath="-161.049545" atv="-18.899314" />
+		<point ath="-161.393592" atv="-3.24558" />
+		<point ath="169.980274" atv="-3.575353" />
+		<point ath="169.926312" atv="-3.573902" />
+	    </hotspot>
+
+
+</krpano>

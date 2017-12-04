@@ -1,0 +1,13 @@
+<krpano version="1.18" title="scene_bg" onstart="">
+
+
+    <action name="hotspot_animate">
+		inc(frame,1,get(lastframe),0);
+		mul(ypos,frame,frameheight);
+		txtadd(crop,'0|',get(ypos),'|',get(framewidth),'|',get(frameheight));
+		if(frameoff LT 1,
+		delayedcall(get(framespeed), if(loaded, hotspot_animate() ) );
+		);
+	</action>
+	
+</krpano>

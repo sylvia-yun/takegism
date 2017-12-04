@@ -1,0 +1,10 @@
+<krpano version="1.18" title="scene5" onstart="">
+
+
+	<hotspot name="hs1" url="%SWFPATH%/img/nav.png" 
+			 onclick="tween(plugin[tips5_3].y,-200,3.0);delayedcall(1.0,tween(plugin[tips5_2].y,200,1.0));"
+	         ath="223.73247" atv="9.105998" width="128" height="112" scale="0.552278" 
+	         />
+
+
+</krpano>
