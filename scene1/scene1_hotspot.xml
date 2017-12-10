@@ -60,7 +60,7 @@
 		     visible="false"
 	         handcursor="true" 
 	         ath="42.041744" atv="-4.709557" width="256" height="256" scale="0.139963" zoom="true"
-	         onclick="set(hotspot[hot2].visible,false); tween(hotspot[hs4].alpha,0); lookto(-320,13,120,smooth(300,200,300)); tween(hotspot[hs3].alpha,1); delayedcall(1.0,tween(plugin[tips_6_4].y,0,1.0));"
+	         onclick="set(hotspot[hot2].visible,false); tween(hotspot[hs4].alpha,0); lookto(-320,13,120,smooth(300,200,300));tween(hotspot[hs3].alpha,1);delayedcall(1.0,tween(plugin[tips_6_4].y,0,1.0));"
 	         />
 
 	<hotspot name="hot3" url="%SWFPATH%/img/z3.png"
